@@ -1,0 +1,61 @@
+{% extends 'store/home.html' %}
+{% load static %}
+{% block content %}
+    <section id="view_prod">
+        <div class="container">
+            <button class="back-btn">Back</button>
+        <div class="row">
+            <div class="col-lg-6 pt-5">
+                <img src="{% static 'images/products/4.png' %}" class="img-fluid" alt="Responsive image">
+            </div>
+            <div class="col-lg-6 pt-5">
+                <p>HappyLife</p>
+				<h6><strong>Premium Green Tea</strong></h6>
+				<h6>₱243.00</h6>
+
+                <a class="ratings" href="#ratings">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"> 1 review/s</i>
+
+                </a>
+                <br>
+                <p class="pt-4">Description</p>
+                <p>Green Tea has a vibrant taste that transforms the
+                    expected green tea experience into a lively, more characterful
+                    brew, perfect to drink in the afternoon. <br><br>
+                    <a href="#seemore">See more...</a></p>
+
+                <div class="row">
+                    <div class="col-lg-4 ">
+                        <p>Quantity</p>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="qty">
+                            <span class="minus bg-dark">-</span>
+                            <input type="number" class="count" name="qty" value="1">
+                            <span class="plus bg-dark">+</span>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <p>436 pieces available</p>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <button  class="btn-add-to-cart">Add to Cart</button>
+                        </div>
+                        <div class="col-lg-4">
+                            <button  class="btn-buy-now">Buy Now</button>
+                        </div>
+                    </div>
+            </div>
+            </div>
+        </div>
+      </div>
+    </section>
+{% endblock content %}
