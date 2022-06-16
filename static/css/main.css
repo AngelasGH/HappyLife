@@ -2,6 +2,7 @@ body{
     background-color: white;
     font-family: 'Roboto', sans-serif;
 }
+
 img{
     width: 50px;
 }
@@ -100,7 +101,6 @@ h1{
     width: 100%;
     height: 100vh;
     background-size: cover;
-    background-position: top 50px center;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -111,7 +111,6 @@ h1{
     width: 100%;
     height: 250px;
     background-size: 50%;
-    background-position: top 50px center;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -245,7 +244,6 @@ h2{
     width: 100%;
     height: 50vh;
     background-size: cover;
-    background-position: top 70px center;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -311,7 +309,6 @@ h2{
     height: 100vh;
     padding: 100px;
     background-size: cover;
-    background-position: top 50px center;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -350,24 +347,9 @@ h2{
     border: 15px solid green;
     padding: 50px;
     margin: 20px;
-    position: absolute;
-    top: 25%;
-    left: 55%;
 }
 
-@media (min-width: 768px) and (max-width: 991.98px) {
 
-    .details_AU {
-        background-color: lightgrey;
-        width: 450px;
-        border: 15px solid green;
-        padding: 50px;
-        margin: 20px;
-        position: absolute;
-        top: 25%;
-        left: 30%;
-    }
- }
 
 #contact_us {
     background-image: url("/static/images/banner/769.png");
@@ -382,16 +364,12 @@ h2{
 
 }
 
+
 #contact_us span{
     font-family: 'Caveat', cursive;
 }
 
-.position_form {
 
-    position: absolute;
-    top: 15%;
-    left: 50%;
-}
 
 #view_prod {
     background: white;
@@ -486,4 +464,102 @@ input:disabled{
 .back-btn:hover {
 
     color: #80CC28;
+}
+
+.carousel-indicators button{
+    width: 10px !important;
+    height: 10px !important;
+    border-radius: 50%;
+}
+
+#signin-form {
+    background: white;
+    width: 100%;
+    height: 100vh;
+    text-align: left;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#cart-image {
+    width: 150px;
+    height: 100px;
+}
+
+.view_link:hover{
+    text-decoration: none;
+}
+
+#register {
+    background-image: url("/static/images/banner/770.png");
+    width: 100%;
+    height: 100vh;
+    text-align: left;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+}
+
+#login {
+    color: white;
+    background-image: url("/static/images/banner/771.png");
+    width: 100%;
+    height: 100vh;
+    text-align: left;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+}
+#reset {
+    color: white;
+    background-image: url("/static/images/banner/772.png");
+    width: 100%;
+    height: 100vh;
+    text-align: left;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+}
+
+
+.btn-auth {
+    font-size: 0.7rem;
+    font-weight: 700;
+    outline: none;
+    border: none;
+    background-color: #598c04;
+    color: aliceblue;
+    padding: 8px 30px;
+    cursor: pointer;
+    text-transform: uppercase;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+.btn-auth:hover {
+    background-color: #80CC28;
+}
+
+#reviews{
+    background: white;
+    width: 100%;
+    height: 100vh;
+    text-align: left;
+    background-size: fit;
+    display: inline;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
 }

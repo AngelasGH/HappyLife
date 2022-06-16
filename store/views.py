@@ -45,3 +45,38 @@ def about_us(request):
 def contact_us(request):
     context = {}
     return render(request, 'store/contact_us.html', context)
+
+
+def register(request):
+    context = {}
+    return render(request, 'Register_login/register.html', context)
+
+
+def login(request):
+    context = {}
+    return render(request, 'Register_login/login.html', context)
+
+
+def reset(request):
+    context = {}
+    return render(request, 'Register_login/reset.html', context)
+
+
+def verification(request):
+    context = {}
+    return render(request, 'Register_login/verification.html', context)
+
+
+def reset_password(request):
+    context = {}
+    return render(request, 'Register_login/verification.html', context)
+
+
+def successfully_reset(request):
+    context = {}
+    return render(request, 'Register_login/successfully_reset.html', context)
+
+
+def reviews(request):
+    context = {}
+    return render(request, 'store/reviews.html', context)
