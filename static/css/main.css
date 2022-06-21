@@ -685,6 +685,63 @@ input:disabled{
     align-items: flex-start;
 }
 
+.btn-buy-again{
+    font-size: 0.7rem;
+    outline: none;
+    border: 1px solid lightgrey;
+    background-color: transparent;
+    color: grey;
+    padding: 15px 35px;
+    cursor: pointer;
+    text-transform: uppercase;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+.btn-buy-again:hover {
+    color: white;
+    background-color: #80CC28;
+}
+
+.btn-contact-us {
+    font-size: 0.7rem;
+    outline: none;
+    border: 1px solid lightgrey;
+    background-color:transparent;
+    color: grey;
+    padding: 15px 35px;
+    cursor: pointer;
+    text-transform: uppercase;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+.btn-contact-us:hover {
+    color: white;
+    background-color: #80CC28;
+}
+
+.btn-rate {
+    font-size: 0.7rem;
+    outline: none;
+    border: 1px solid lightgrey;
+    background-color: transparent;
+    color: grey;
+    padding: 15px 60px;
+    cursor: pointer;
+    text-transform: uppercase;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+.btn-rate:hover {
+    color: white;
+    background-color: #80CC55;
+}
+
+
+
+
 ol.progtrckr {
     margin: 0;
     padding: 0;

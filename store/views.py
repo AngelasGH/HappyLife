@@ -277,6 +277,6 @@ def details(request):
     return render(request, 'purchase/details.html', context)
 
 
-def details(request):
+def order_received(request):
     context = {}
-    return render(request, 'purchase/details.html', context)
+    return render(request, 'purchase/order_received.html', context)
