@@ -15,21 +15,21 @@
                                <a class="view_link pt-3" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false"><p>My Account</p></a>
 
                                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                        <li><a class="dropdown-item" href="#">Profile</a></li>
-                                        <li><a class="dropdown-item" href="#">Banks & Cards</a></li>
-                                        <li><a class="dropdown-item" href="#">Address</a></li>
-                                        <li><a class="dropdown-item" href="#">Change Password</a></li>
+                                        <li><a class="dropdown-item" href="{% url 'profile' %}">Profile</a></li>
+                                        <li><a class="dropdown-item" href="{% url 'banks' %}">Banks & Cards</a></li>
+                                        <li><a class="dropdown-item" href="{% url 'address' %}">Address</a></li>
+                                        <li><a class="dropdown-item" href="{% url 'change_password' %}">Change Password</a></li>
                                       </ul>
 
 
-                                <a class="view_link" href="#"><p><strong>My Purchase</strong></p></a>
-                                <a class="view_link" href="#"><p>Logout</p></a>
+                                <a class="view_link" href="#"><p style="font-size: 15px;"><strong>My Purchase</strong></p></a>
+                                <a class="view_link" href="{% url 'home' %}"><p>Logout</p></a>
                             </div>
                     </div>
 
                     <div class="col-lg-9">
                         <div class="row col-lg-12 border rounded py-3 px-3">
-                            <div class="col-lg-2"><p>Back</p></div>
+                            <a class="view_link" href="{% url 'to_receive' %}"><div class="col-lg-2"><p>Back</p></div></a>
                         </div>
                         <br>
                         <ol class="progtrckr" data-progtrckr-steps="5">
@@ -126,10 +126,10 @@
                                      <p class="py-4 px-4">Order Total:  <strong>P 698.00</strong></p>
                                     </div>
                                     <div class="col-lg-4">
-                                        <a href="{% url 'credit_debit' %}"><button class="btn-payment">Contact Us</button></a>
+                                        <a href="{% url 'user_contact_us' %}"><button class="btn-payment">Contact Us</button></a>
                                     </div>
                                  <div class="col-lg-4">
-                                     <a href="{% url 'credit_debit' %}"><button  class="btn-active">Order Received</button></a>
+                                     <a href="{% url 'order_received' %}"><button  class="btn-active">Order Received</button></a>
                                     </div>
                              </div>
 

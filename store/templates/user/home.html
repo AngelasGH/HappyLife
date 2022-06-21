@@ -57,12 +57,12 @@
                       <a href="#search"><i class="bi bi-search" aria-hidden="true"></i></a>
                   </li>
                   <li class="nav-item pt-1 pl-4 pr-1 ">
-                       <a href="{% url 'register' %}">
+                       <a href="{% url 'profile' %}">
                            <img src="{% static 'images/persons/profile.png' %}" alt="..." class="rounded-circle size">
                        </a>
                 </li>
                   <li class="nav-item pt-2 pl-1 pr-4 ">
-                      <a class="view_link" href="#profile">
+                      <a class="view_link" href="{% url 'profile' %}">
                             <p>Juan Dela Crush</p>
                       </a>
                 </li>
@@ -132,7 +132,10 @@
  		            }
  		        });
  		    });
-
+        $(".myBox").click(function() {
+          window.location = $(this).find("a").attr("href");
+          return false;
+        });
         </script>
 
 </body>

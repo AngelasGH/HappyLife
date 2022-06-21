@@ -280,3 +280,28 @@ def details(request):
 def order_received(request):
     context = {}
     return render(request, 'purchase/order_received.html', context)
+
+
+def profile(request):
+    context = {}
+    return render(request, 'my_account/profile.html', context)
+
+
+def banks(request):
+    context = {}
+    return render(request, 'my_account/banks_cards.html', context)
+
+
+def change_password(request):
+    context = {}
+    return render(request, 'my_account/change_password.html', context)
+
+
+def address(request):
+    context = {}
+    return render(request, 'my_account/address.html', context)
+
+
+def banks_cards_new(request):
+    context = {}
+    return render(request, 'my_account/banks_cards_new.html', context)

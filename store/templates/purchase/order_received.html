@@ -15,15 +15,15 @@
                                <a class="view_link pt-3" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false"><p>My Account</p></a>
 
                                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                        <li><a class="dropdown-item" href="#">Profile</a></li>
-                                        <li><a class="dropdown-item" href="#">Banks & Cards</a></li>
-                                        <li><a class="dropdown-item" href="#">Address</a></li>
-                                        <li><a class="dropdown-item" href="#">Change Password</a></li>
+                                        <li><a class="dropdown-item" href="{% url 'profile' %}">Profile</a></li>
+                                        <li><a class="dropdown-item" href="{% url 'banks' %}">Banks & Cards</a></li>
+                                        <li><a class="dropdown-item" href="{% url 'address' %}">Address</a></li>
+                                        <li><a class="dropdown-item" href="{% url 'change_password' %}">Change Password</a></li>
                                       </ul>
 
 
-                                <a class="view_link" href="#"><p><strong>My Purchase</strong></p></a>
-                                <a class="view_link" href="#"><p>Logout</p></a>
+                                <a class="view_link" href="#"><p style="font-size: 15px;"><strong>My Purchase</strong></p></a>
+                                <a class="view_link" href="{% url 'home' %}"><p>Logout</p></a>
                             </div>
                     </div>
                     <div class="col-lg-9 ">
@@ -122,10 +122,10 @@
                                      <p class="py-4 px-4">Order Total:  <strong>P 698.00</strong></p>
                                     </div>
                                     <div class="col-lg-3 d-flex justify-content-end">
-                                        <a href="{% url 'credit_debit' %}"><button class="btn-buy-again">Buy Again</button></a>
+                                        <a href="{% url 'user_cart' %}"><button class="btn-buy-again">Buy Again</button></a>
                                     </div>
                                  <div class="col-lg-3 d-flex justify-content-end">
-                                     <a href="{% url 'credit_debit' %}"><button  class="btn-contact-us">Contact Us</button></a>
+                                     <a href="{% url 'user_contact_us' %}"><button  class="btn-contact-us">Contact Us</button></a>
                                     </div>
                                  <div class="col-lg-3 d-flex justify-content-end">
                                      <button type="button" data-toggle="modal" data-target="#modal-credit-form" class="btn-add-credit">Rate</button>
@@ -137,46 +137,126 @@
 
                      <!-- Modal -->
             <div class="modal fade" id="modal-credit-form" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-              <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
                   <div class="modal-body">
                     <div class="row d-flex justify-content-center">
                     <div class="col-lg-12 d-flex justify-content-center">
-                        <p>Add A New Credit Card</p>
+                        <p>Rate Product</p>
                     </div>
-                    <div class="alert alert-warning" role="alert">
-                         $1.00 will be deducted as verification fee. It will be refunded to you within 5 days.
+                    <div class="row col-lg-12">
+                <div class="row p-3">
+                    <div class="col-lg-6">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="form-check pt-2">
+
+                                    <img id="cart-image" class="rounded mx-auto d-block" src="{% static 'images/products/4.png' %}">
+
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 col-md-4 py-3">
+                                  <p><strong>Premium Green Tea</strong></p>
+                                  <p style="font-size:12px;, margin:0;, padding: 0;">50 Bags per Box</p>
+                            </div>
+
+                        </div>
                     </div>
 
-                    <div class="col-lg-12 py-2">
-                            <input type="text" class="form-control" placeholder="Juan Dela Crush">
+                    <div class="col-lg-2 pt-3">
+                        <p>₱ 243.00</p>
                     </div>
-                    <div class="col-lg-12 py-2">
-                            <input type="email" class="form-control" placeholder="10458521145872">
+
+                    <div class="col-lg-2 pt-3">
+                        <p>1</p>
                     </div>
-                    <div class="col-lg-6 py-2">
-                            <input type="password" class="form-control" placeholder="05/23">
+
+                    <div class="col-lg-2 pt-3">
+                        <p>₱ 243.00</p>
                     </div>
-                    <div class="col-lg-6 py-2">
-                            <input type="password" class="form-control" placeholder="157">
+
+                    <div class="row col-lg-12  py-3">
+                        <div class="col-lg-12 d-flex justify-content-end">
+                        <i class="bi bi-star"></i>
+                        <i class="bi bi-star"></i>
+                        <i class="bi bi-star"></i>
+                        <i class="bi bi-star"></i>
+                        <i class="bi bi-star"></i>
                     </div>
-                    <div class="col-lg-12 py-2">
-                            <input type="password" class="form-control" placeholder="089 Saging Street, Barangay Unggoy, Butuan City">
+                    <br>
+                    <div class="col-lg-12  d-flex justify-content-center pt-3">
+                        <input type="text" class="form-control pt-2" id="text" placeholder="Message here...">
+                        </div>
+                    <br>
+                    <div class="col-lg-12  d-flex justify-content-end pt-3">
+                        <a href="{% url 'credit_debit' %}"><button  class="btn-contact-us py-2"><i class="bi bi-camera"></i></button></a>
                     </div>
-                    <div class="col-lg-12 py-2">
-                            <input type="password" class="form-control" placeholder="8600">
+
+
+                </div>
+
+                   <div class="row p-3">
+                    <div class="col-lg-6">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-4">
+                                <div class="form-check">
+                                    <img id="cart-image" class="rounded mx-auto d-block" src="{% static 'images/products/1.png' %}">
+
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 py-3">
+                                  <p><strong>Chamomile Tea</strong></p>
+                                  <p style="font-size:12px;, margin:0;, padding: 0;">50 Bags per Box</p>
+                            </div>
+
+                        </div>
                     </div>
+                    <div class="col-lg-2 pt-3">
+                        <p>₱ 355.00</p>
+                    </div>
+
+                    <div class="col-lg-2 pt-3">
+                        <p>1</p>
+                    </div>
+
+                    <div class="col-lg-2 pt-3">
+                        <p>₱ 355.00</p>
+                    </div>
+
+                     <div class="row col-lg-12  py-3">
+                        <div class="col-lg-12 d-flex justify-content-end">
+                        <i class="bi bi-star"></i>
+                        <i class="bi bi-star"></i>
+                        <i class="bi bi-star"></i>
+                        <i class="bi bi-star"></i>
+                        <i class="bi bi-star"></i>
+                    </div>
+
+                </div>
+                        <br>
+                    <div class="col-lg-12  d-flex justify-content-center pt-3">
+                        <input type="text" class="form-control pt-2" id="text" placeholder="Message here...">
+                        </div>
+                    <br>
+                    <div class="col-lg-12  d-flex justify-content-end pt-3 pb-3">
+                        <a href="{% url 'credit_debit' %}"><button  class="btn-contact-us py-2"><i class="bi bi-camera"></i></button></a>
+                    </div>
+                        <br>
+
+                </div>
 
                     <div class="row pt-5 d-flex justify-content-end">
                         <div class="col-lg-3  col-md-6 col-3">
                             <button  type="button" class="btn-buy-now" data-dismiss="modal">cancel</button>
                         </div>
                         <div class="col-lg-3 col-md-6 col-3">
-                            <a href="{% url 'credit_debit_ready_to_place' %}"><button  class="btn-add-to-cart">Submit</button></a>
+                           <button type="button" data-dismiss="modal" class="btn-add-to-cart">Submit</button>
                         </div>
                     </div>
                 </div>
               </div>
             </div>
-    </section>
+</section>
 {% endblock content %}

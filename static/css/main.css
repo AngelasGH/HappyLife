@@ -739,7 +739,9 @@ input:disabled{
     background-color: #80CC55;
 }
 
-
+p{
+    font-size: 12px;
+}
 
 
 ol.progtrckr {

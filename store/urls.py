@@ -64,4 +64,10 @@ urlpatterns = [
     path('purchase_details/', views.purchase_details, name="purchase_details"),
     path('details/', views.details, name="details"),
     path('order_received/', views.order_received, name="order_received"),
+    # My Account
+    path('profile/', views.profile, name="profile"),
+    path('banks/', views.banks, name="banks"),
+    path('change_password/', views.change_password, name="change_password"),
+    path('address/', views.address, name="address"),
+    path('banks_cards_new/', views.banks_cards_new, name="banks_cards_new"),
 ]
