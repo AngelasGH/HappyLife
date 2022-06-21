@@ -1,0 +1,122 @@
+{% extends 'user/home.html' %}
+{% load static %}
+{% block content %}
+    <section id="reviews">
+
+        <div class="container py-5">
+            <div class="row">
+                    <div class="row col-lg-3">
+                            <div class="col-lg-3">
+                                <img class="img-fluid rounded-circle" src="{% static 'images/persons/Juan.png' %}">
+                            </div>
+                            <div class="col-lg-9">
+                               <p>Juan Dela Crush</p>
+                               <p>Edit Profile</p>
+                               <a class="" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false"><p class="pt-5">My Account</p></a>
+                               <p>My Purchase</p>
+                               <p>Logout</p>
+                            </div>
+                    </div>
+                    <div class="col-lg-9">
+                        <div class="row col-lg-12 border rounded py-3 px-3">
+                            <div class="col-lg-2"><p>All</p></div>
+                            <div class="col-lg-2"><p>To Pay</p></div>
+                            <div class="col-lg-2"><p>To Ship</p></div>
+                            <div class="col-lg-2"><p>To Receive</p></div>
+                            <div class="col-lg-2"><p>Completed</p></div>
+                            <div class="col-lg-2"><p>Cancelled</p></div>
+                        </div>
+                        <br>
+                <div class="row col-lg-12 border rounded">
+                <div class="row p-3">
+                    <div class="col-lg-6">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="form-check pt-2">
+
+                                    <img id="cart-image" class="rounded mx-auto d-block" src="{% static 'images/products/4.png' %}">
+
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 col-md-4 py-3">
+                                  <p><strong>Premium Green Tea</strong></p>
+                                  <p style="font-size:12px;, margin:0;, padding: 0;">50 Bags per Box</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-lg-2 pt-3">
+                        <p>₱ 243.00</p>
+                    </div>
+
+                    <div class="col-lg-2 pt-3">
+                        <p>1</p>
+                    </div>
+
+                    <div class="col-lg-2 pt-3">
+                        <p>₱ 243.00</p>
+                    </div>
+
+                </div>
+
+                   <div class="row p-3">
+                    <div class="col-lg-6">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-4">
+                                <div class="form-check">
+                                    <img id="cart-image" class="rounded mx-auto d-block" src="{% static 'images/products/1.png' %}">
+
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 py-3">
+                                  <p><strong>Chamomile Tea</strong></p>
+                                  <p style="font-size:12px;, margin:0;, padding: 0;">50 Bags per Box</p>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-2 pt-3">
+                        <p>₱ 355.00</p>
+                    </div>
+
+                    <div class="col-lg-2 pt-3">
+                        <p>1</p>
+                    </div>
+
+                    <div class="col-lg-2 pt-3">
+                        <p>₱ 355.00</p>
+                    </div>
+
+                </div>
+
+                </div>
+                <br><br>
+
+                <div class="container py-5">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <p>Merchandise Total</p>
+                            <p>Shipping</p>
+                            <p>Order Total</p>
+                        </div>
+                         <div class="col-lg-4">
+                            <p>₱ 598.00</p>
+                            <p>₱ 100.00</p>
+                            <p>₱ 698.00</p>
+                        </div>
+                        <div class="col-lg-4">
+                             <div class="d-flex justify-content-end pt-5">
+                                <div class="p-2 bd-highlight">
+                                    <h2 style="font-size: 20px">Total( 2 Items): ₱ 698.00</h2>
+                                </div>
+                                <div class="p-2 bd-highlight">
+                                    <a href="{% url 'cash_on' %}"><button  class="btn-add-to-cart">Pay</button></a>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+    </section>
+{% endblock content %}

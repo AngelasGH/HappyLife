@@ -1,4 +1,4 @@
-{% extends 'store/home.html' %}
+{% extends 'user/home.html' %}
 {% load static %}
 {% block content %}
 <section id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
@@ -32,9 +32,9 @@
 <section class="container">
         <div class="row justify-content-center py-2">
             <div class="col-lg-3 col-md-6 col-8 py-4">
-            <a href="{% url 'chamomile' %}"><img class="thumbnail" src="{% static 'images/products/1.png' %}"></a>
+            <a href="{% url 'user_chamomile' %}"><img class="thumbnail" src="{% static 'images/products/1.png' %}"></a>
                 <div class="box-element product">
-                    <a class="view_link" href="{% url 'chamomile' %}">
+                    <a class="view_link" href="{% url 'user_chamomile' %}">
                         <p>HAPPY LIFE</p>
                         <h6><strong>Chamomile Tea</strong></h6>
                         <h6>₱ 355.00</h6>
@@ -44,11 +44,11 @@
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 col-8 py-4">
-                <a href="{% url 'green_tea' %}">
+                <a href="{% url 'user_green_tea' %}">
                     <img class="thumbnail" src="{% static 'images/products/4.png' %}">
                 </a>
                 <div class="box-element product">
-                    <a class="view_link" href="{% url 'green_tea' %}">
+                    <a class="view_link" href="{% url 'user_green_tea' %}">
                         <p>HAPPY LIFE</p>
                         <h6><strong>Premium Green Tea</strong></h6>
                         <h6>₱ 243.00</h6>
@@ -58,11 +58,11 @@
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 col-8 py-4">
-                <a href="{% url 'lapsang' %}">
+                <a href="{% url 'user_lapsang' %}">
                     <img class="thumbnail" src="{% static 'images/products/2.png' %}">
                 </a>
                 <div class="box-element product">
-                    <a class="view_link" href="{% url 'lapsang' %}">
+                    <a class="view_link" href="{% url 'user_lapsang' %}">
                         <p>HAPPY LIFE</p>
                         <h6><strong>Lapsang Souchong Tea</strong></h6>
                         <h6>₱ 450.00</h6>
@@ -72,11 +72,11 @@
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 col-8 py-4">
-                  <a href="{% url 'butterfly' %}">
+                  <a href="{% url 'user_butterfly' %}">
                       <img class="thumbnail" src="{% static 'images/products/3.png' %}">
                   </a>
                 <div class="box-element product">
-                   <a class="view_link" href="{% url 'butterfly' %}">
+                   <a class="view_link" href="{% url 'user_butterfly' %}">
                         <p>HAPPY LIFE</p>
                         <h6><strong>Butterfly Tea</strong></h6>
                         <h6>₱ 350.00</h6>

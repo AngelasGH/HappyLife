@@ -376,8 +376,8 @@ h2{
     width: 100%;
     height: 100vh;
     text-align: left;
-    background-size: cover;
-    display: flex;
+    background-size: fit;
+    display: inline;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
@@ -477,8 +477,8 @@ input:disabled{
     width: 100%;
     height: 100vh;
     text-align: left;
-    background-size: cover;
-    display: flex;
+    background-size: fit;
+    display: inline;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
@@ -562,4 +562,101 @@ input:disabled{
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+}
+
+.active {
+    color: #80CC28 !important;
+}
+
+.size {
+    width: 35px !important;
+    height: 35px !important;
+}
+
+.bi {
+    font-size: 18px !important;
+}
+
+.cart-basket {
+    font-size: .6rem;
+    width: 16px;
+    height: 16px;
+    color: #fff;
+    background-color: #598c04;
+    border-radius: 50%;
+}
+
+
+.input-group-text{
+    background-color: white!important;
+}
+
+#search {
+    width: 100%;
+    length: 100%;
+    position: flex;
+    top: 0;
+    z-index: 2000;
+}
+
+.btn-payment {
+    font-size: 0.8rem;
+    outline: none;
+    border: 1px solid lightgrey;
+    background-color: transparent;
+    color: grey;
+    padding: 15px 60px;
+    cursor: pointer;
+    text-transform: uppercase;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+.btn-payment:hover {
+    color: white;
+    background-color: #80CC28;
+}
+
+.btn-active {
+    font-size: 0.8rem;
+    outline: none;
+    border: none;
+    background-color: #80CC28;
+    color: white;
+    padding: 15px 60px;
+    cursor: pointer;
+    text-transform: uppercase;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+.btn-add-credit {
+    font-size: 0.8rem;
+    outline: none;
+    border: 1px solid lightgrey;
+    background-color: transparent;
+    color: grey;
+    padding: 15px 60px;
+    cursor: pointer;
+    text-transform: uppercase;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+.btn-add-credit:hover {
+    color: #80CC28;
+}
+
+.btn-add-to-disabled {
+    font-size: 0.7rem;
+    font-weight: 700;
+    outline: none;
+    border: none;
+    background-color: lightgrey;
+    color: white;
+    padding: 8px 30px;
+    cursor: pointer;
+    text-transform: uppercase;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
 }

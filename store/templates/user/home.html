@@ -24,46 +24,57 @@
         <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
 
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 </head>
 <body>
 
 
         <nav class="navbar sticky-top navbar-expand-lg bg-light">
           <div class="container">
-            <a href="{% url 'home' %}"><img src="{% static 'images/HappyLife-logo.png' %}" alt=""></a>
+            <a href="{% url 'user_home' %}"><img src="{% static 'images/HappyLife-logo.png' %}" alt=""></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span><i id="bar" class="bi bi-list"></i></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 {% with request.resolver_match.url_name as url_name %}
               <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                  <a class="nav-link {% if url_name == 'home' %}active{% endif %}" aria-current="page" href="{% url 'home' %}">Home</a>
+                <li class="nav-item ">
+                  <a class="nav-link {% if url_name == 'user_home' %}active{% endif %}" aria-current="page" href="{% url 'user_home' %}">Home</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link {% if url_name == 'products' %}active{% endif %}" href="{% url 'products' %}">Products</a>
+                  <a class="nav-link {% if url_name == 'user_products' %}active{% endif %}" href="{% url 'user_products' %}">Products</a>
                 </li>
                   <li class="nav-item">
-                  <a class="nav-link {% if url_name == 'faqs' %}active{% endif %}" href="{% url 'faqs' %}">FAQs</a>
+                  <a class="nav-link {% if url_name == 'user_faqs' %}active{% endif %}" href="{% url 'user_faqs' %}">FAQs</a>
                 </li>
                   <li class="nav-item">
-                  <a class="nav-link {% if url_name == 'about_us' %}active{% endif %}" href="{% url 'about_us' %}">About Us</a>
+                  <a class="nav-link {% if url_name == 'user_about_us' %}active{% endif %}" href="{% url 'user_about_us' %}">About Us</a>
                 </li>
                   <li class="nav-item">
-                  <a class="nav-link {% if url_name == 'contact_us' %}active{% endif %}" href="{% url 'contact_us' %}">Contact Us</a>
+                  <a class="nav-link {% if url_name == 'user_contact_us' %}active{% endif %}" href="{% url 'user_contact_us' %}">Contact Us</a>
                 </li>
-                  <li class="nav-item pt-1 px-2">
+                  <li class="nav-item pt-1 px-3">
                       <a href="#search"><i class="bi bi-search" aria-hidden="true"></i></a>
                   </li>
-                  <li class="nav-item">
+                  <li class="nav-item pt-1 pl-4 pr-1 ">
                        <a href="{% url 'register' %}">
-                           <button type="button" class="button-signin">Sign In</button>
+                           <img src="{% static 'images/persons/profile.png' %}" alt="..." class="rounded-circle size">
                        </a>
                 </li>
-                  <li class="nav-item">
-                      <a href="{% url 'login' %}">
-                            <button type="button" class="button-login">Login</button>
+                  <li class="nav-item pt-2 pl-1 pr-4 ">
+                      <a class="view_link" href="#profile">
+                            <p>Juan Dela Crush</p>
                       </a>
+                </li>
+                  <li class="nav-item pt-1 pl-3 pr-1">
+                      <a href="{% url 'user_cart' %}">
+                            <i class="fas fa fa-shopping-cart fa-lg"></i>
+                      </a>
+                </li>
+                <li class="nav-item  ">
+                      <span class="cart-basket d-flex align-items-center justify-content-center">
+                                2
+                      </span>
                 </li>
               </ul>
                 {% endwith %}
@@ -71,12 +82,11 @@
           </div>
         </nav>
 
-
         {% block content%}
                 <section id="home">
                         <div class="container">
                             <h1>Healthy Life<br><span>BRIGHTER</span><br>Future</h1>
-                            <a href="{% url 'products' %}"><button class="btn-sn">Shop Now</button></a>
+                            <a href="{% url 'user_products' %}"><button class="btn-sn">Shop Now</button></a>
                         </div>
                 </section>
 
@@ -122,6 +132,7 @@
  		            }
  		        });
  		    });
+
         </script>
 
 </body>

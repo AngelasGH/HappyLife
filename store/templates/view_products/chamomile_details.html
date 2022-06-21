@@ -3,17 +3,17 @@
 {% block content %}
     <section id="view_prod">
         <div class="container">
-            <button class="back-btn">Back</button>
+            <a class="view_link" href="{% url 'chamomile' %}"><button class="back-btn py-5">Back</button></a>
         <div class="row">
             <div class="col-lg-6 pt-5">
-                <img src="{% static 'images/products/4.png' %}" class="img-fluid" alt="Responsive image">
+                <img src="{% static 'images/products/1.png' %}" class="img-fluid" alt="Responsive image">
             </div>
             <div class="col-lg-6 pt-5">
                 <p>HappyLife</p>
-				<h6><strong>Premium Green Tea</strong></h6>
-				<h6>₱243.00</h6>
+				<h6><strong>Chamomile Tea</strong></h6>
+				<h6>₱ 355.00</h6>
 
-                <a class="ratings" href="#ratings">
+                <a class="ratings " href="{% url 'chamomile' %}#reviews">
                     <i class="bi bi-star-fill"></i>
                     <i class="bi bi-star-fill"></i>
                     <i class="bi bi-star-fill"></i>

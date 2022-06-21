@@ -10,14 +10,16 @@
                 <div class="col-lg-12 d-flex justify-content-center">
                             <p>We've sent you an email</p>
                         </div>
-                <form class="col-lg-4">
+                <div class="col-lg-4">
                 <div class="col-lg-12 py-2">
                         <input type="password" class="form-control" placeholder="●●●●●●●">
                 </div>
                 <div class="col-lg-12 d-flex justify-content-center py-2">
-                    <button class="btn-auth">Verify</button>
+                    <a href="{% url 'reset_password' %}">
+                        <button class="btn-auth">Verify</button>
+                    </a>
                 </div>
-                </form>
+                </div>
             </div>
         </div>
     </section>
