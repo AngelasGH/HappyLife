@@ -62,5 +62,5 @@ urlpatterns = [
     # Purchases
     path('to_receive/', views.to_receive, name="to_receive"),
     path('purchase_details/', views.purchase_details, name="purchase_details"),
-
+    path('details/', views.details, name="details"),
 ]

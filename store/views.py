@@ -270,3 +270,13 @@ def to_receive(request):
 def purchase_details(request):
     context = {}
     return render(request, 'purchase/purchase_details.html', context)
+
+
+def details(request):
+    context = {}
+    return render(request, 'purchase/details.html', context)
+
+
+def details(request):
+    context = {}
+    return render(request, 'purchase/details.html', context)
